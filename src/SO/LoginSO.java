@@ -31,7 +31,7 @@ public class LoginSO extends AbstractGenericSO {
                 + "' and password='" + user.getPassword() + "'");
         if (result.size() > 0) {
             transferObject.message = "Login successful!";
-            user = (User) result.get(0);
+            transferObject.generalEntity = result.get(0);
             transferObject.signal = true;
         } else {
             transferObject.message = "Login not successful!";

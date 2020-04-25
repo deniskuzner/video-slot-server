@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import SO.CreateUserSO;
 import SO.LoginSO;
 import Transfer.TransferObject;
 
@@ -25,6 +26,11 @@ public class Controller {
 
     public TransferObject login(TransferObject transferObject) throws Exception {
         new LoginSO().loginSO(transferObject);
+        return transferObject;
+    }
+
+    public TransferObject createUser(TransferObject transferObject) {
+        new CreateUserSO().createUserSO(transferObject);
         return transferObject;
     }
 

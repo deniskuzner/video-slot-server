@@ -46,6 +46,9 @@ public class ClientThread extends Thread {
                 if(operation.equals("login")) {
                     Controller.getInstance().login(transferObject);
                 }
+                if(operation.equals("createUser")) {
+                    Controller.getInstance().createUser(transferObject);
+                }
 
 //                if (operation.equals("kreirajKorisnika")) {
 //                    kreirajKorisnika(transferObject);
