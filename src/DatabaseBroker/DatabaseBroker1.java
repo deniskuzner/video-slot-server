@@ -211,12 +211,12 @@ public class DatabaseBroker1 extends DatabaseBroker {
         return recordsNumber;
     }
 
-    public boolean executeUpdate(String upit) {
+    public boolean executeUpdate(String query) {
         Statement st = null;
         boolean signal = false;
         try {
-            st = connection.prepareStatement(upit);
-            int rowcount = st.executeUpdate(upit);
+            st = connection.prepareStatement(query);
+            int rowcount = st.executeUpdate(query);
             if (rowcount > 0) {
                 signal = true;
             }

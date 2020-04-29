@@ -32,8 +32,6 @@ public class ClientThread extends Thread {
     @Override
     public void run() {
         try {
-            String signal = "";
-
             TransferObject transferObject;
 
             while (true) {
@@ -49,31 +47,13 @@ public class ClientThread extends Thread {
                 if(operation.equals("createUser")) {
                     Controller.getInstance().createUser(transferObject);
                 }
+                if(operation.equals("updateUser")) {
+                    Controller.getInstance().updateUser(transferObject);
+                }
+                if(operation.equals("deleteUser")) {
+                    Controller.getInstance().deleteUser(transferObject);
+                }
 
-//                if (operation.equals("kreirajKorisnika")) {
-//                    kreirajKorisnika(transferObject);
-//                }
-//                if (operation.equals("promeniKorisnika")) {
-//                    promeniKorisnika(transferObject);
-//                }
-//                if (operation.equals("obrisiKorisnika")) {
-//                    obrisiKorisnika(transferObject);
-//                }
-//                if (operation.equals("nadjiKorisnika")) {
-//                    nadjiKorisnika(transferObject);
-//                }
-//                if (operation.equals("naPrvi")) {
-//                    naPrvi(transferObject);
-//                }
-//                if (operation.equals("naSledeci")) {
-//                    naSledeci(transferObject);
-//                }
-//                if (operation.equals("naPredhodni")) {
-//                    naPredhodni(transferObject);
-//                }
-//                if (operation.equals("naPoslednji")) {
-//                    naPoslednji(transferObject);
-//                }
                 out.writeObject(transferObject);
             }
         } catch (Exception e) {

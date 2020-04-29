@@ -6,7 +6,9 @@
 package Controller;
 
 import SO.CreateUserSO;
+import SO.DeleteUserSO;
 import SO.LoginSO;
+import SO.UpdateUserSO;
 import Transfer.TransferObject;
 
 /**
@@ -31,6 +33,16 @@ public class Controller {
 
     public TransferObject createUser(TransferObject transferObject) {
         new CreateUserSO().createUserSO(transferObject);
+        return transferObject;
+    }
+    
+    public TransferObject updateUser(TransferObject transferObject) {
+        new UpdateUserSO().updateUserSO(transferObject);
+        return transferObject;
+    }
+    
+    public TransferObject deleteUser(TransferObject transferObject) {
+        new DeleteUserSO().deleteUserSO(transferObject);
         return transferObject;
     }
 
