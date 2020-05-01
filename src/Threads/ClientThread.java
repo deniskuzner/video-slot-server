@@ -53,6 +53,9 @@ public class ClientThread extends Thread {
                 if(operation.equals("deleteUser")) {
                     Controller.getInstance().deleteUser(transferObject);
                 }
+                if(operation.equals("getUsers")) {
+                    Controller.getInstance().getUsers(transferObject);
+                }
 
                 out.writeObject(transferObject);
             }
