@@ -30,7 +30,7 @@ public class DeleteUserSO extends AbstractGenericSO {
                 transferObject.message = "User delete successful!";
                 transferObject.signal = true;
             } else {
-                transferObject.message = "User delete not successful!";
+                transferObject.message = "User cannot be deleted!";
             }
         } else {
             transferObject.message = "User delete not successful beacause user doesn't exist!";
